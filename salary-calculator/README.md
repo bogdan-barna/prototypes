@@ -106,8 +106,8 @@
 7. Munkáltatói költség = munkáltatót terhelő bruttó rész + CAM, figyelembe véve a betegszabadság finanszírozását.
 
 ## 3.4. A 300/200 lejes minimálbéres adómentes rész
-- 2026. január–június: legfeljebb 300 lej/hó.
-- 2026. július–december: legfeljebb 200 lej/hó.
+- 2026 január–június: legfeljebb 300 lej/hó.
+- 2026 július–december: legfeljebb 200 lej/hó.
 - A munkavállaló teljes munkaidős munkaviszonyban dolgozik, és ez a funcția de bază – alapmunkahely.
 - A munkaszerződésben szereplő alapbér pontosan az adott hónapban hatályos országos minimálbér.
 - A figyelembe vett havi bruttó jövedelem legfeljebb 4 300 lej az első félévben, illetve 4 600 lej a második félévben, a jogszabályban kizárt juttatások figyelembevételével.
