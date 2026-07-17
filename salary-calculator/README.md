@@ -79,8 +79,8 @@
 ## 3.2. Minimálbér 2026-ban
 | **Időszak**                     | **Havi bruttó minimum** | **Munkaidő / órabér**                | **Kapcsolódó külön szabály**                                    |
 |---------------------------------|-------------------------|--------------------------------------|-----------------------------------------------------------------|
-| 2026. január 1. – június 30.   | 4 050 lej               | Teljes munkaidő                      | Legfeljebb 300 lej/hó adó- és járulékmentes rész, feltételekkel |
-| 2026. július 1. – december 31. | 4 325 lej               | Átlag 166,667 óra/hó; 25,949 lej/óra | Legfeljebb 200 lej/hó adó- és járulékmentes rész, feltételekkel |
+| 2026 január 1. – június 30.   | 4 050 lej               | Teljes munkaidő                      | Legfeljebb 300 lej/hó adó- és járulékmentes rész, feltételekkel |
+| 2026 július 1. – december 31. | 4 325 lej               | Átlag 166,667 óra/hó; 25,949 lej/óra | Legfeljebb 200 lej/hó adó- és járulékmentes rész, feltételekkel |
 
 > [!IMPORTANT]
 > **Minimálbér-ellenőrzés**
