@@ -1,3 +1,6 @@
+https://bogdan-barna.github.io/prototypes/salary-calculator/hungarian.html
+https://bogdan-barna.github.io/prototypes/salary-calculator/romanian.html
+
 # Románia és Magyarország
 
 ## Bérkalkulátor – jogszabályi és számítási dokumentáció
