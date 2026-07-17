@@ -158,12 +158,12 @@
 *A kalkulátor magyar munkaviszonyra vonatkozó fő jogszabályi háttere.*
 
 ## 4.1. Fő jogszabályi keret
-- 2012. évi I. törvény – Munka Törvénykönyve: munkaviszony, munkabér, betegszabadság és bérminimumok felhatalmazási alapja.
+- 2012 évi I. törvény – Munka Törvénykönyve: munkaviszony, munkabér, betegszabadság és bérminimumok felhatalmazási alapja.
 - 426/2025. (XII. 23.) Korm. rendelet: a 2026-os minimálbér és garantált bérminimum.
-- 1995. évi CXVII. törvény – Szja tv.: személyi jövedelemadó és adóalap-kedvezmények.
-- 2019. évi CXXII. törvény – Tbj.: biztosítási jogviszony és 18,5%-os társadalombiztosítási járulék.
-- 2018. évi LII. törvény – Szocho tv.: a munkáltatói szociális hozzájárulási adó.
-- 1997. évi LXXXIII. törvény – Ebtv., valamint a végrehajtási szabályok: táppénz jogosultság, alap, mérték és maximum.
+- 1995 évi CXVII. törvény – Szja tv.: személyi jövedelemadó és adóalap-kedvezmények.
+- 2019 évi CXXII. törvény – Tbj.: biztosítási jogviszony és 18,5%-os társadalombiztosítási járulék.
+- 2018 évi LII. törvény – Szocho tv.: a munkáltatói szociális hozzájárulási adó.
+- 1997 évi LXXXIII. törvény – Ebtv., valamint a végrehajtási szabályok: táppénz jogosultság, alap, mérték és maximum.
 - NAV 2026-os információs füzetei és a Magyar Államkincstár táppénz/betegszabadság tájékoztatója.
 
 ## 4.2. Minimálbér és garantált bérminimum 2026-ban
