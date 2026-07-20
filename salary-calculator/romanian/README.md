@@ -19,7 +19,7 @@ Interfața este disponibilă în română și maghiară prin selectorul RO / HU 
 
 ## Pornire
 
-Deschideți `index.html` direct într-un browser modern. Aplicația nu are nevoie de server, bază de date sau instalare.
+Deschideți `index.html` direct într-un browser. Aplicația nu are nevoie de server, bază de date sau instalare.
 
 Pentru publicare, întregul folder poate fi încărcat pe Netlify, Vercel, GitHub Pages sau pe un server web obișnuit.
 
