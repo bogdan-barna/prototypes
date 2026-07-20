@@ -11,7 +11,7 @@
 
 Összefoglaló a 2026-ban alkalmazandó főbb munkajogi, adó- és társadalombiztosítási szabályokról.
 
-**Állapot:** 2026. július 17.
+**Aktualizált:** 2026. július 15.
 
 
 > [!IMPORTANT]
