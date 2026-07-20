@@ -1,6 +1,6 @@
-> https://bogdan-barna.github.io/prototypes/salary-calculator/hungarian.html
+> https://bogdan-barna.github.io/prototypes/salary-calculator/hungarian/index.html
 > 
-> https://bogdan-barna.github.io/prototypes/salary-calculator/romanian.html
+> https://bogdan-barna.github.io/prototypes/salary-calculator/romanian/index.html
 
 # Románia és Magyarország
 
