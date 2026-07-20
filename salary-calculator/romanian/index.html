@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e1415a">
+  <meta name="description" content="Calculator Salarii 2026 pentru România: brut-net, net-brut, taxe, concedii medicale și cost total angajator.">
+  <title>Calculator Salarii 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#calculator" aria-label="Calculator salariu România">
+        <span class="brand-mark">RO</span>
+        <span><strong>Calculator salariu</strong><small>România · 2026</small></span>
+      </a>
+      <div class="header-actions">
+        <div class="language-switcher" role="group" aria-label="Limbă / Nyelv">
+          <button type="button" id="lang-ro" class="language-button active" aria-pressed="true">RO</button>
+          <button type="button" id="lang-hu" class="language-button" aria-pressed="false">HU</button>
+        </div>
+        <span class="verified-badge">Reguli verificate: 15.07.2026</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell page-grid" id="calculator">
+    <section class="intro">
+      <p class="eyebrow">BRUT · NET · COST ANGAJATOR</p>
+      <h1 id="page-title">Calculator Salarii 2026</h1>
+      <p>Calculatorul este conceput pentru un contract individual de muncă standard. Include salariul minim, taxele salariale, deducerile personale și concediile medicale calculate pe baza veniturilor din ultimele 6 luni.</p>
+    </section>
+
+    <section class="calculator-card" aria-labelledby="calculator-title">
+      <div class="mode-tabs" role="tablist" aria-label="Tip calcul">
+        <button class="mode-tab active" type="button" data-mode="gross" role="tab" aria-selected="true">Brut → Net</button>
+        <button class="mode-tab" type="button" data-mode="net" role="tab" aria-selected="false">Net → Brut</button>
+      </div>
+
+      <div class="form-column">
+        <div class="card-heading">
+          <div>
+            <p class="eyebrow">DATE DE CALCUL</p>
+            <h2 id="calculator-title">Introdu salariul</h2>
+          </div>
+          <div class="quick-actions">
+            <button class="text-button" id="use-minimum" type="button">Salariul minim</button>
+          </div>
+        </div>
+
+        <div class="field-grid">
+          <label class="field field-wide">
+            <span id="amount-label">Salariu brut lunar</span>
+            <span class="money-input">
+              <input id="amount" type="number" min="0" step="1" inputmode="numeric" value="4325" aria-describedby="amount-hint">
+              <strong>lei</strong>
+            </span>
+            <small id="amount-hint">Venitul brut total realizat în luna selectată.</small>
+          </label>
+
+          <label class="field">
+            <span>Luna calculului</span>
+            <select id="month" aria-label="Luna calculului">
+              <option value="2026-01">ianuarie 2026</option>
+              <option value="2026-02">februarie 2026</option>
+              <option value="2026-03">martie 2026</option>
+              <option value="2026-04">aprilie 2026</option>
+              <option value="2026-05">mai 2026</option>
+              <option value="2026-06">iunie 2026</option>
+              <option value="2026-07" selected>iulie 2026</option>
+              <option value="2026-08">august 2026</option>
+              <option value="2026-09">septembrie 2026</option>
+              <option value="2026-10">octombrie 2026</option>
+              <option value="2026-11">noiembrie 2026</option>
+              <option value="2026-12">decembrie 2026</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Persoane în întreținere</span>
+            <select id="dependents">
+              <option value="0">0 persoane</option>
+              <option value="1">1 persoană</option>
+              <option value="2">2 persoane</option>
+              <option value="3">3 persoane</option>
+              <option value="4">4 sau mai multe</option>
+            </select>
+          </label>
+        </div>
+
+        <details class="options-panel" open>
+          <summary>Situația angajatului</summary>
+          <div class="options-content">
+            <label class="check-row">
+              <input id="primary-job" type="checkbox" checked>
+              <span><strong>Funcția de bază</strong><small>Deducerea personală se acordă numai la funcția de bază.</small></span>
+            </label>
+
+            <label class="check-row">
+              <input id="minimum-contract" type="checkbox" checked>
+              <span><strong>Salariul de bază din contract este egal cu salariul minim</strong><small>Permite aplicarea sumei netaxabile dacă sunt îndeplinite și celelalte condiții.</small></span>
+            </label>
+
+            <label class="check-row">
+              <input id="under-26" type="checkbox">
+              <span><strong>Angajatul are cel mult 26 de ani</strong><small>Poate beneficia de deducerea suplimentară de 15% din salariul minim.</small></span>
+            </label>
+          </div>
+        </details>
+
+        <details class="options-panel" id="medical-panel">
+          <summary>Concediu medical</summary>
+          <div class="options-content">
+            <label class="check-row">
+              <input id="medical-enabled" type="checkbox">
+              <span><strong>Include concediu medical în luna selectată</strong><small>Salariul pentru zilele lucrate și indemnizația medicală vor fi calculate separat.</small></span>
+            </label>
+
+            <div class="medical-fields" id="medical-fields" hidden>
+              <label class="field field-wide">
+                <span>Tipul concediului medical</span>
+                <select id="medical-type">
+                  <option value="ordinary">Boală obișnuită / accident în afara muncii (cod 01)</option>
+                  <option value="cardiovascular">Boală cardiovasculară eligibilă</option>
+                  <option value="serious">Afecțiune gravă / urgență medico-chirurgicală</option>
+                  <option value="quarantine">Carantină sau izolare (cod 07)</option>
+                  <option value="maternity">Sarcină și lăuzie (cod 08)</option>
+                  <option value="childCare">Îngrijirea copilului bolnav</option>
+                  <option value="oncologyCare">Îngrijirea pacientului cu afecțiuni oncologice</option>
+                  <option value="maternalRisk">Risc maternal (cod 15)</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Zile calendaristice în episod</span>
+                <div class="unit-input"><input id="episode-days" type="number" min="1" max="999" step="1" value="5"><strong>zile</strong></div>
+                <small>Determină procentul de 55%, 65% sau 75% pentru boala obișnuită.</small>
+              </label>
+
+              <label class="field">
+                <span>Zile lucrătoare de concediu în lună</span>
+                <div class="unit-input"><input id="medical-workdays" type="number" min="0" max="31" step="1" value="5"><strong>zile</strong></div>
+              </label>
+
+              <label class="field">
+                <span>Total zile lucrătoare în lună</span>
+                <div class="unit-input"><input id="month-workdays" type="number" min="1" max="31" step="1" value="23"><strong>zile</strong></div>
+                <small>Poate fi corectat manual în funcție de programul de lucru.</small>
+              </label>
+
+              <label class="field">
+                <span>Zile lucrătoare anterioare din același episod</span>
+                <div class="unit-input"><input id="previous-episode-days" type="number" min="0" max="365" step="1" value="0"><strong>zile</strong></div>
+                <small>Necesar pentru continuări și repartizarea angajator/FNUASS.</small>
+              </label>
+
+              <label class="field">
+                <span>Venituri asigurate din ultimele 6 luni</span>
+                <span class="money-input compact-money"><input id="base-income-total" type="number" min="0" step="1" value="24300"><strong>lei</strong></span>
+                <small>Suma veniturilor brute care intră în baza concediului medical.</small>
+              </label>
+
+              <label class="field">
+                <span>Zile lucrate în ultimele 6 luni</span>
+                <div class="unit-input"><input id="base-workdays-total" type="number" min="1" max="184" step="1" value="121"><strong>zile</strong></div>
+                <small>Numitorul mediei zilnice a bazei de calcul.</small>
+              </label>
+
+              <label class="check-row field-wide">
+                <input id="one-day-exempt" type="checkbox">
+                <span><strong>Certificat exceptat de la diminuarea cu o zi</strong><small>Bifează pentru PNS, spitalizare sau o altă excepție legală aplicabilă certificatului.</small></span>
+              </label>
+
+              <div class="medical-preview field-wide" id="medical-preview"></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="options-panel">
+          <summary>Deducere suplimentară pentru copii</summary>
+          <div class="options-content">
+            <label class="field">
+              <span>Copii sub 18 ani înscriși într-o unitate de învățământ</span>
+              <input id="children" type="number" min="0" max="20" step="1" value="0">
+              <small>Deducere suplimentară de 100 lei/copil pentru părintele beneficiar.</small>
+            </label>
+          </div>
+        </details>
+
+        <p class="auto-calc-note" role="status">Rezultatul se actualizează automat când modifici o valoare.</p>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+      </div>
+
+      <div class="result-column" aria-live="polite">
+        <div class="minimum-strip">
+          <span>Salariul minim valabil</span>
+          <strong id="minimum-value">4.325 lei</strong>
+          <small id="minimum-period">1 iulie – 31 decembrie 2026</small>
+        </div>
+
+        <div class="headline-result">
+          <p id="main-result-label">Salariu net estimat</p>
+          <div><strong id="main-result">2.699</strong><span>lei</span></div>
+          <small id="result-difference" hidden></small>
+        </div>
+
+        <div class="breakdown" id="breakdown">
+          <div><span>Salariu brut contractual</span><strong id="gross-result">4.325 lei</strong></div>
+          <div class="medical-result-row" hidden><span>Salariu pentru zilele lucrate</span><strong id="worked-gross-result">4.325 lei</strong></div>
+          <div class="medical-result-row" hidden><span>Indemnizație medicală brută</span><strong id="medical-gross-result">0 lei</strong></div>
+          <div class="medical-result-row" hidden><span>Total brut plătit</span><strong id="total-gross-result">4.325 lei</strong></div>
+          <div><span>Sumă netaxabilă</span><strong id="exemption-result">200 lei</strong></div>
+          <div><span>CAS · pensie (25%)</span><strong id="cas-result">−1.031 lei</strong></div>
+          <div><span>CASS · sănătate (10%)</span><strong id="cass-result">−413 lei</strong></div>
+          <div><span>Deducere personală</span><strong id="deduction-result">865 lei</strong></div>
+          <div><span>Impozit pe venit (10%)</span><strong id="tax-result">−182 lei</strong></div>
+          <div class="emphasis"><span>Salariu net</span><strong id="net-result">2.699 lei</strong></div>
+          <div><span>CAM angajator (2,25%)</span><strong id="cam-result">93 lei</strong></div>
+          <div class="medical-result-row" hidden><span>Indemnizație recuperabilă din FNUASS</span><strong id="fund-result">0 lei</strong></div>
+          <div class="emphasis"><span>Cost efectiv angajator</span><strong id="cost-result">4.418 lei</strong></div>
+        </div>
+
+        <details class="allowance-breakdown" id="allowance-breakdown">
+          <summary>Detalierea deducerilor</summary>
+          <div id="allowance-lines"></div>
+        </details>
+
+        <div class="warnings" id="warnings" hidden></div>
+
+        <div class="result-actions">
+          <button class="secondary-button" id="copy-result" type="button">Copiază rezultatul</button>
+          <button class="secondary-button" type="button" onclick="window.print()">Tipărește</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card">
+        <p class="eyebrow">REGULI INCLUSE</p>
+        <h2>Ce include calculatorul?</h2>
+        <ul>
+          <li>CAS 25%, CASS 10%, impozit pe venit 10% și CAM 2,25%.</li>
+          <li>Salariul minim din 2026, cu reguli distincte pentru cele două semestre.</li>
+          <li>Deducerea personală în funcție de venit și numărul persoanelor aflate în întreținere.</li>
+          <li>Deduceri suplimentare pentru angajații de cel mult 26 de ani și pentru copiii eligibili.</li>
+          <li>Suma netaxabilă de 300 lei în semestrul I și 200 lei în semestrul II.</li>
+          <li>Concedii medicale: baza zilnică din ultimele 6 luni, procentele legale, contribuțiile și repartizarea angajator/FNUASS.</li>
+        </ul>
+      </article>
+
+      <article class="info-card legal-card">
+        <p class="eyebrow">SURSE OFICIALE</p>
+        <h2>Baza legală</h2>
+        <a href="https://legislatie.just.ro/Public/DetaliiDocumentAfis/308231" target="_blank" rel="noreferrer">HG nr. 146/2026 · salariul minim de la 1 iulie 2026</a>
+        <a href="https://legislatie.just.ro/Public/DetaliiDocumentAfis/291450" target="_blank" rel="noreferrer">HG nr. 1.506/2024 · salariul minim de 4.050 lei</a>
+        <a href="https://legislatie.just.ro/Public/DetaliiDocumentAfis/305817" target="_blank" rel="noreferrer">OUG nr. 89/2025 · suma netaxabilă în 2026</a>
+        <a href="https://legislatie.just.ro/Public/DetaliiDocumentAfis/309361" target="_blank" rel="noreferrer">Legea nr. 227/2015 · Codul fiscal actualizat</a>
+        <a href="https://legislatie.just.ro/Public/DetaliiDocument/66305" target="_blank" rel="noreferrer">OUG nr. 158/2005 · concedii și indemnizații medicale</a>
+        <a href="https://legislatie.just.ro/Public/DetaliiDocumentAfis/307943" target="_blank" rel="noreferrer">Ordinul nr. 521/500/2026 · diminuarea cu o zi și formulele de calcul</a>
+        <a href="https://www.cnpp.ro/noutati/-/asset_publisher/FbjvUfJwDu7P/content/precizari-legea-bass-2026" target="_blank" rel="noreferrer">CNPP · câștigul salarial mediu brut în 2026</a>
+      </article>
+    </section>
+
+    <section class="scope-note">
+      <strong>Important:</strong> rezultatul este orientativ și se referă la un contract individual de muncă standard. Modulul medical calculează un singur tip de certificat/episod în luna selectată și necesită introducerea datelor reale din adeverința de venit. Nu include accidente de muncă, boli profesionale, mai multe certificate diferite în aceeași lună, tichete, beneficii, popriri, contribuții facultative, condiții speciale, scutiri sectoriale sau regulile contribuțiilor minime pentru contracte part-time. Pentru statul de plată și declarația D112 este necesară validarea unui specialist în salarizare.
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell">Calculator salariu România · MVP 2026</div></footer>
+
+  <script src="salary-core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
