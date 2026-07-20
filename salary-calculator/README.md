@@ -1,5 +1,12 @@
 # Romániai és magyarországi bérkalkulátor 2026
 
+> [!TIP]
+> ## 🧮 Próbáld ki a bérkalkulátorokat
+>
+> 🇭🇺 **[Magyarországi bérkalkulátor megnyitása](https://bogdan-barna.github.io/prototypes/salary-calculator/hungarian/index.html)**
+>
+> 🇷🇴 **[Romániai bérkalkulátor megnyitása](https://bogdan-barna.github.io/prototypes/salary-calculator/romanian/index.html)**
+
 ## Bérkalkulátor – jogszabályi és számítási dokumentáció
 
 Összefoglaló a 2026-ban alkalmazandó főbb munkajogi, adó- és társadalombiztosítási szabályokról.
