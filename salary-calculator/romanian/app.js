@@ -61,7 +61,7 @@
     decimalFormatter = new Intl.NumberFormat(language === 'hu' ? 'hu-HU' : 'ro-RO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     document.documentElement.lang = language;
     document.title = language === 'hu' ? 'Romániai bérkalkulátor 2026' : 'Calculator Salarii 2026';
-    document.getElementById('page-title').textContent = language === 'hu' ? 'Bérkalkulátor 2026' : 'Calculator Salarii 2026';
+    document.getElementById('page-title').textContent = language === 'hu' ? 'Bérkalkulátor 2026 Románia' : 'Calculator Salarii 2026 România';
     staticTextNodes.forEach(item => { item.node.nodeValue = item.before + (language === 'hu' ? STATIC_HU[item.original] : item.original) + item.after; });
     document.querySelectorAll('#month option').forEach((option, index) => { option.textContent = `${monthNames[language][index]} 2026`; });
     document.getElementById('lang-ro').classList.toggle('active', language === 'ro');
