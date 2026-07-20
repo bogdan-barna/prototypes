@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="hu">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#e1415a" name="theme-color"/>
+<meta content="Magyar bérkalkulátor 2026: bruttó-nettó, nettó-bruttó, adókedvezmények és teljes munkáltatói költség." name="description"/>
+<title data-i18n="pageTitle">Magyar bérkalkulátor 2026</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="site-header">
+<div class="shell header-inner">
+<a aria-label="Magyar bérkalkulátor" class="brand" data-i18n-aria="brandAria" href="#kalkulator">
+<span class="brand-mark">HU</span>
+<span><strong data-i18n="brandTitle">Bérkalkulátor</strong><small data-i18n="brandSubtitle">Magyarország · 2026</small></span>
+</a>
+<div class="header-actions"><span class="verified-badge" data-i18n="verified">Szabályok ellenőrizve: 2026. 07. 15.</span><div aria-label="Language / Nyelv" class="language-switcher" role="group"><button aria-pressed="true" class="language-button active" data-lang="hu" type="button">HU</button><button aria-pressed="false" class="language-button" data-lang="en" type="button">EN</button></div></div></div>
+</header>
+<main class="shell page-grid" id="kalkulator">
+<section class="intro">
+<p class="eyebrow" data-i18n="introEyebrow">BRUTTÓ · NETTÓ · MUNKÁLTATÓI KÖLTSÉG</p>
+<h1 data-i18n="introTitle">Számold ki a magyarországi fizetést a 2026-os szabályok alapján</h1>
+<p data-i18n="introText">A kalkulátor standard munkaviszonyra készült. Kezeli a minimálbért, az adókat, a legfontosabb kedvezményeket, továbbá a betegszabadságot és a táppénzt is.</p>
+</section>
+<section aria-labelledby="calculator-title" class="calculator-card">
+<div aria-label="Számítás típusa" class="mode-tabs" data-i18n-aria="calculationTypeAria" role="tablist">
+<button aria-selected="true" class="mode-tab active" data-i18n="grossToNet" data-mode="gross" role="tab" type="button">Bruttó → Nettó</button>
+<button aria-selected="false" class="mode-tab" data-i18n="netToGross" data-mode="net" role="tab" type="button">Nettó → Bruttó</button>
+</div>
+<div class="form-column">
+<div class="card-heading">
+<div>
+<p class="eyebrow" data-i18n="calcData">SZÁMÍTÁSI ADATOK</p>
+<h2 data-i18n="enterSalary" id="calculator-title">Add meg a fizetést</h2>
+</div>
+<div class="quick-actions">
+<button class="text-button" data-i18n="minimumWage" id="use-minimum" type="button">Minimálbér</button>
+<button class="text-button" data-i18n="guaranteedMinimumShort" id="use-guaranteed" type="button">Garantált minimum</button>
+</div>
+</div>
+<div class="field-grid">
+<label class="field field-wide">
+<span data-i18n="monthlyGrossBase" id="amount-label">Havi bruttó alapbér</span>
+<span class="money-input">
+<input aria-describedby="amount-hint" id="amount" inputmode="numeric" min="0" step="1" type="number" value="322800"/>
+<strong data-currency-unit="true">Ft</strong>
+</span>
+<small data-i18n="monthlyGrossHint" id="amount-hint">A havi bruttó alapbér, külön bónuszok és béren kívüli juttatások nélkül.</small>
+</label>
+<label class="field">
+<span data-i18n="calculationMonth">Számítás hónapja</span>
+<select aria-label="Számítás hónapja" data-i18n-aria="calculationMonth" id="month">
+<option value="2026-01">2026. január</option>
+<option value="2026-02">2026. február</option>
+<option value="2026-03">2026. március</option>
+<option value="2026-04">2026. április</option>
+<option value="2026-05">2026. május</option>
+<option value="2026-06">2026. június</option>
+<option selected="" value="2026-07">2026. július</option>
+<option value="2026-08">2026. augusztus</option>
+<option value="2026-09">2026. szeptember</option>
+<option value="2026-10">2026. október</option>
+<option value="2026-11">2026. november</option>
+<option value="2026-12">2026. december</option>
+</select>
+</label>
+<label class="field">
+<span data-i18n="weeklyHours">Heti munkaidő</span>
+<span class="unit-input"><input id="weekly-hours" max="40" min="1" step="1" type="number" value="40"/><strong data-i18n="hoursUnit">óra</strong></span>
+</label>
+<label class="field field-wide">
+<span data-i18n="minimumCheck">Kötelező bérminimum ellenőrzése</span>
+<select id="minimum-type">
+<option data-i18n="minimumWage" value="minimum">Minimálbér</option>
+<option data-i18n="guaranteedMinimumOption" value="guaranteed">Garantált bérminimum – középfokú végzettséget igénylő munkakör</option>
+<option data-i18n="noMinimumCheck" value="none">Nem kérek ellenőrzést</option>
+</select>
+</label>
+</div>
+<details class="options-panel" open="">
+<summary data-i18n="ageMotherAllowances">Életkorhoz és anyasághoz kapcsolódó kedvezmények</summary>
+<div class="options-content">
+<label class="field">
+<span data-i18n="birthDate">Születési dátum</span>
+<input id="birth-date" max="2010-12-31" min="1940-01-01" type="date"/>
+<small data-i18n="birthDateHint">Az életkorhoz kötött kedvezmények automatikus ellenőrzéséhez.</small>
+</label>
+<label class="check-row">
+<input id="under-25" type="checkbox"/>
+<span><strong data-i18n="under25Allowance">25 év alatti fiatalok kedvezménye</strong><small data-i18n="under25Hint">2026-ban legfeljebb havi 715 765 Ft adóalapra.</small></span>
+</label>
+<label class="check-row">
+<input id="under-30-mother" type="checkbox"/>
+<span><strong data-i18n="under30MotherAllowance">30 év alatti anyák kedvezménye</strong><small data-i18n="eligibilityDeclaration">A jogosultságot a felhasználó nyilatkozata alapján alkalmazzuk.</small></span>
+</label>
+<label class="field">
+<span data-i18n="multiChildMotherAllowance">Többgyermekes anyák kedvezménye</span>
+<select id="mother-exemption">
+<option data-i18n="notApplied" value="none">Nem alkalmazom</option>
+<option data-i18n="twoChildMotherOption" value="two">Két gyermeket nevelő anya – 2026-ban jogosult korcsoport</option>
+<option data-i18n="threeChildMotherOption" value="three">Három gyermeket nevelő anya</option>
+<option data-i18n="fourChildMotherOption" value="four">Négy vagy több gyermeket nevelő anya</option>
+</select>
+</label>
+</div>
+</details>
+<details class="options-panel">
+<summary data-i18n="otherTaxAllowances">Egyéb SZJA-kedvezmények</summary>
+<div class="options-content">
+<label class="check-row">
+<input id="personal-allowance" type="checkbox"/>
+<span><strong data-i18n="personalAllowance">Személyi kedvezmény</strong><small data-i18n="personalAllowanceHint">Havi 107 600 Ft adóalap-kedvezmény.</small></span>
+</label>
+<label class="check-row">
+<input id="first-marriage" type="checkbox"/>
+<span><strong data-i18n="firstMarriageAllowance">Első házasok kedvezménye</strong><small data-i18n="firstMarriageHint">A házaspár által igénybe vehető havi keret megosztható.</small></span>
+</label>
+<label class="field indented-field" hidden="" id="first-marriage-share-wrap">
+<span data-i18n="firstMarriageShare">Az első házasok kedvezményéből igényelt rész</span>
+<select id="first-marriage-share">
+<option data-i18n="firstMarriage100" value="100">100% – 33 335 Ft adóalap</option>
+<option data-i18n="firstMarriage50" value="50">50% – 16 668 Ft adóalap</option>
+<option data-i18n="firstMarriage25" value="25">25% – 8 334 Ft adóalap</option>
+</select>
+</label>
+</div>
+</details>
+<details class="options-panel">
+<summary data-i18n="familyAllowance">Családi kedvezmény</summary>
+<div class="options-content family-grid">
+<label class="field">
+<span data-i18n="totalDependents">Eltartottak teljes száma</span>
+<input id="total-dependents" max="20" min="0" step="1" type="number" value="0"/>
+</label>
+<label class="field">
+<span data-i18n="beneficiaryDependents">Kedvezményezett eltartottak</span>
+<input id="beneficiary-dependents" max="20" min="0" step="1" type="number" value="0"/>
+</label>
+<label class="field">
+<span data-i18n="disabledBeneficiaries">Ebből tartósan beteg / súlyosan fogyatékos</span>
+<input id="disabled-beneficiaries" max="20" min="0" step="1" type="number" value="0"/>
+</label>
+<label class="field">
+<span data-i18n="familyShare">A kedvezményből igényelt rész</span>
+<select id="family-share">
+<option value="100">100%</option>
+<option value="75">75%</option>
+<option value="50">50%</option>
+<option value="25">25%</option>
+</select>
+</label>
+<label class="check-row field-wide">
+<input checked="" id="family-contribution" type="checkbox"/>
+<span><strong data-i18n="familyContributionAllowance">Családi járulékkedvezmény alkalmazása</strong><small data-i18n="familyContributionHint">A fel nem használt családi adóalap-kedvezmény 15%-a a TB-járulékot is csökkentheti.</small></span>
+</label>
+</div>
+</details>
+<details class="options-panel">
+<summary data-i18n="specialStatus">Speciális munkavállalói státusz</summary>
+<div class="options-content">
+<label class="check-row">
+<input id="pensioner" type="checkbox"/>
+<span><strong data-i18n="pensioner">Saját jogú nyugdíjas munkavállaló</strong><small data-i18n="pensionerHint">A standard esetben nincs 18,5% TB-járulék és 13% munkáltatói szocho.</small></span>
+</label>
+</div>
+</details>
+<details class="options-panel" id="sickness-panel">
+<summary data-i18n="sicknessPanel">Betegszabadság és táppénz</summary>
+<div class="options-content">
+<label class="check-row">
+<input id="sickness-enabled" type="checkbox"/>
+<span><strong data-i18n="sicknessEnabled">Keresőképtelenség figyelembevétele</strong><small data-i18n="sicknessEnabledHint">A ledolgozott napok bére, a betegszabadság és a táppénz külön kerül kiszámításra.</small></span>
+</label>
+<div class="medical-fields" hidden="" id="sickness-fields">
+<label class="field field-wide">
+<span data-i18n="absenceType">Keresőképtelenség típusa</span>
+<select id="absence-type">
+<option data-i18n="absenceOrdinary" value="ordinary">Saját betegség</option>
+<option data-i18n="absenceHospital" value="hospital">Kórházi / fekvőbeteg-ellátás</option>
+<option data-i18n="absencePregnancy" value="pregnancy">Veszélyeztetett várandósság</option>
+<option data-i18n="absenceChildCare" value="childCare">Gyermekápolási táppénz (GYÁP)</option>
+</select>
+</label>
+<label class="field">
+<span data-i18n="monthWorkdays">Összes munkanap a hónapban</span>
+<span class="unit-input"><input id="month-workdays" max="31" min="1" step="1" type="number" value="23"/><strong data-i18n="daysUnit">nap</strong></span>
+<small data-i18n="monthWorkdaysHint">Az általános 2026-os munkarend alapján automatikusan kitöltjük, de módosítható.</small>
+</label>
+<label class="field">
+<span data-i18n="sickLeaveWorkdays">Betegszabadság munkanapjai</span>
+<span class="unit-input"><input id="sick-leave-workdays" max="31" min="0" step="1" type="number" value="5"/><strong data-i18n="daysUnit">nap</strong></span>
+<small data-i18n="sickLeaveHint">A betegszabadság idejére a becsült távolléti díj 70%-a jár.</small>
+</label>
+<label class="field">
+<span data-i18n="sickLeaveUsedBefore">Korábban felhasznált betegszabadság</span>
+<span class="unit-input"><input id="sick-leave-used-before" max="15" min="0" step="1" type="number" value="0"/><strong data-i18n="daysUnit">nap</strong></span>
+<small data-i18n="sickLeaveQuotaHint">Az éves keret főszabály szerint 15 munkanap.</small>
+</label>
+<label class="field">
+<span data-i18n="sickPayWorkdays">Táppénzes munkanapok a hónapban</span>
+<span class="unit-input"><input id="sick-pay-workdays" max="31" min="0" step="1" type="number" value="0"/><strong data-i18n="daysUnit">nap</strong></span>
+<small data-i18n="sickPayWorkdaysHint">A havi munkabér arányosításához szükséges.</small>
+</label>
+<label class="field">
+<span data-i18n="sickPayCalendarDays">Táppénzes naptári napok a hónapban</span>
+<span class="unit-input"><input id="sick-pay-calendar-days" max="31" min="0" step="1" type="number" value="0"/><strong data-i18n="daysUnit">nap</strong></span>
+<small data-i18n="sickPayCalendarHint">A táppénz minden jogosult naptári napra járhat.</small>
+</label>
+<label class="field">
+<span data-i18n="sickPayBaseIncome">Táppénzalap jövedelme</span>
+<span class="money-input compact-money"><input id="sick-pay-base-income" min="0" step="1" type="number" value="1936800"/><strong data-currency-unit="true">Ft</strong></span>
+<small data-i18n="sickPayBaseIncomeHint">Az irányadó időszakban bevallott, járulékalapot képező jövedelem összege.</small>
+</label>
+<label class="field">
+<span data-i18n="sickPayBaseDays">Táppénzalap naptári napjai</span>
+<span class="unit-input"><input id="sick-pay-base-days" max="366" min="1" step="1" type="number" value="180"/><strong data-i18n="daysUnit">nap</strong></span>
+<small data-i18n="sickPayBaseDaysHint">A jövedelemhez tartozó figyelembe vehető naptári napok.</small>
+</label>
+<label class="check-row field-wide">
+<input checked="" id="insurance-730" type="checkbox"/>
+<span><strong data-i18n="insurance730">Legalább 730 nap folyamatos biztosítási idő</strong><small data-i18n="insurance730Hint">Főszabály szerint 60%-os táppénz; enélkül, illetve fekvőbeteg-ellátásnál 50%.</small></span>
+</label>
+<div class="medical-preview field-wide" id="sickness-preview"></div>
+</div>
+</div>
+</details>
+<p class="auto-calc-note" data-i18n="autoCalc" role="status">Az eredmény automatikusan frissül, amikor módosítasz egy értéket.</p>
+<p class="form-error" hidden="" id="form-error" role="alert"></p>
+</div>
+<div aria-live="polite" class="result-column">
+<div class="minimum-strip">
+<span data-i18n="minimumSummary" id="minimum-label">2026-os minimálbér</span>
+<strong id="minimum-value">322 800 Ft</strong>
+<small data-i18n="fullTimeMonthly" id="minimum-period">Teljes munkaidő · havi alapbér</small>
+</div>
+<div class="headline-result">
+<p data-i18n="estimatedNetSalary" id="main-result-label">Becsült nettó munkabér</p>
+<div><strong id="main-result">214 662</strong><span data-currency-unit="true">Ft</span></div>
+<small hidden="" id="result-difference"></small>
+</div>
+<div class="breakdown">
+<div><span data-i18n="contractualGrossSalary">Havi szerződéses bruttó bér</span><strong id="gross-result">322 800 Ft</strong></div>
+<div class="medical-result-row" hidden=""><span data-i18n="workedDaysSalary">Ledolgozott napokra járó bér</span><strong id="worked-gross-result">322 800 Ft</strong></div>
+<div class="medical-result-row" hidden=""><span data-i18n="sickLeaveGross">Betegszabadság bruttó összege</span><strong id="sick-leave-gross-result">0 Ft</strong></div>
+<div class="medical-result-row" hidden=""><span data-i18n="sickPayGross">Táppénz bruttó összege</span><strong id="sick-pay-gross-result">0 Ft</strong></div>
+<div class="medical-result-row" hidden=""><span data-i18n="totalGrossPayment">Összes bruttó kifizetés</span><strong id="total-gross-result">322 800 Ft</strong></div>
+<div><span data-i18n="appliedAllowances">Alkalmazott adóalap-kedvezmények</span><strong id="allowances-result">0 Ft</strong></div>
+<div><span data-i18n="taxBaseAfterAllowances">Kedvezmények utáni SZJA-alap</span><strong id="taxable-result">322 800 Ft</strong></div>
+<div><span data-i18n="personalIncomeTax">Személyi jövedelemadó · 15%</span><strong id="tax-result">−48 420 Ft</strong></div>
+<div><span data-i18n="socialSecurityBeforeAllowance">TB-járulék kedvezmény előtt · 18,5%</span><strong id="raw-tb-result">−59 718 Ft</strong></div>
+<div><span data-i18n="familyContributionLabel">Családi járulékkedvezmény</span><strong id="family-contribution-result">0 Ft</strong></div>
+<div><span data-i18n="payableSocialSecurity">Fizetendő TB-járulék</span><strong id="tb-result">−59 718 Ft</strong></div>
+<div class="emphasis"><span data-i18n="netSalary" id="net-result-label">Nettó munkabér</span><strong id="net-result">214 662 Ft</strong></div>
+<div><span data-i18n="employerSocialTax">Munkáltatói szocho · 13%</span><strong id="szocho-result">41 964 Ft</strong></div>
+<div class="medical-result-row" hidden=""><span data-i18n="employerSickPayContribution">Munkáltatói táppénz-hozzájárulás</span><strong id="sick-pay-contribution-result">0 Ft</strong></div>
+<div class="emphasis"><span data-i18n="totalEmployerCost">Teljes munkáltatói költség</span><strong id="cost-result">364 764 Ft</strong></div>
+</div>
+<details class="allowance-breakdown" id="allowance-breakdown">
+<summary data-i18n="detailedBreakdown">Kedvezmények részletes bontása</summary>
+<div id="allowance-lines"></div>
+</details>
+<div class="warnings" hidden="" id="warnings"></div>
+<div class="result-actions">
+<button class="secondary-button" data-i18n="copyResult" id="copy-result" type="button">Eredmény másolása</button>
+<button class="secondary-button" data-i18n="print" onclick="window.print()" type="button">Nyomtatás</button>
+</div>
+</div>
+</section>
+<section class="info-grid">
+<article class="info-card">
+<p class="eyebrow" data-i18n="includedRules">BEÉPÍTETT SZABÁLYOK</p>
+<h2 data-i18n="whatItHandles">Mit kezel a kalkulátor?</h2>
+<ul>
+<li data-i18n="ruleRates">15% SZJA, 18,5% TB-járulék és 13% munkáltatói szocho.</li>
+<li data-i18n="ruleMinimum">2026-os minimálbér és garantált bérminimum, részmunkaidős arányosítással.</li>
+<li data-i18n="ruleAllowances">25 és 30 év alattiak, többgyermekes anyák, személyi és első házas kedvezmény.</li>
+<li data-i18n="ruleFamily">Családi adó- és járulékkedvezmény, megosztási aránnyal.</li>
+<li data-i18n="rulePensioner">Saját jogú nyugdíjas munkavállaló standard közteher-szabályai.</li>
+<li data-i18n="ruleSickness">Betegszabadság, táppénz és gyermekápolási táppénz becsült havi hatása.</li>
+</ul>
+</article>
+<article class="info-card legal-card">
+<p class="eyebrow" data-i18n="officialSources">HIVATALOS FORRÁSOK</p>
+<h2 data-i18n="legalBasis">Jogi háttér</h2>
+<a data-i18n="sourceMinimumWage" href="https://njt.hu/jogszabaly/2025-426-20-22" rel="noreferrer" target="_blank">426/2025. (XII. 23.) Korm. rendelet · 2026-os minimálbérek</a>
+<a data-i18n="sourceTaxAllowances" href="https://nav.gov.hu/pfile/file?path=%2Fugyfeliranytu%2Fnezzen-utana%2Finf_fuz%2Frejtett%2FInformacios-fuzetek---Aktualis%2F73.-Szja-adoalap-kedvezmenyek" rel="noreferrer" target="_blank">NAV · SZJA adóalap-kedvezmények 2026</a>
+<a data-i18n="sourceUnder25" href="https://nav.gov.hu/ado/szja/szja-kedvezmenyek/25-ev-alatti-fiatalok-kedvezmenye" rel="noreferrer" target="_blank">NAV · 25 év alatti fiatalok kedvezménye</a>
+<a data-i18n="sourceFamily" href="https://nav.gov.hu/sajtoszoba/hirek/Jovore_jon_a_dupla_csaladi_adokedvezmeny" rel="noreferrer" target="_blank">NAV · családi kedvezmény 2026</a>
+<a data-i18n="sourcePensioner" href="https://nav.gov.hu/sajtoszoba/hirek/Nyugdij_melletti_munka_nincs_se_tb_se_szocho" rel="noreferrer" target="_blank">NAV · nyugdíj melletti munkavégzés</a>
+<a data-i18n="sourceSickPay" href="https://www.allamkincstar.gov.hu/egeszsegbiztositas/Betegseg/tappenz-betegszabadsag" rel="noreferrer" target="_blank">Magyar Államkincstár · táppénz és betegszabadság</a>
+<a data-i18n="sourceChildCare" href="https://www.allamkincstar.gov.hu/egeszsegbiztositas/Betegseg/gyermekapolasi-tappenz-gyap-" rel="noreferrer" target="_blank">Magyar Államkincstár · gyermekápolási táppénz</a>
+</article>
+</section>
+<section class="scope-note"><strong data-i18n="important">Fontos:</strong> <span data-i18n="scopeText">az eredmény tájékoztató jellegű, és standard munkaviszony havi elszámolására vonatkozik. A betegszabadság napi összegét egyszerűsített módon, a havi szerződéses bérből becsüli; a tényleges távolléti díj, a táppénzalap jogszabályi kiválasztása és a jogosultsági idő szakértői ellenőrzést igényelhet. Nem kezeli a baleseti táppénzt, több párhuzamos jogviszonyt, több eltérő igazolást ugyanabban a hónapban, CSED-et, GYED-et, EKHO-t, cafeteriát, letiltást, külföldi adóilletőséget vagy a teljes bérszámfejtési bevallási logikát.</span></section>
+</main>
+<footer class="site-footer"><div class="shell" data-i18n="footer">Magyar bérkalkulátor · MVP 2026</div></footer>
+<script src="salary-core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
