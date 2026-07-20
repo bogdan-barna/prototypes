@@ -2,7 +2,7 @@
 > 
 > https://bogdan-barna.github.io/prototypes/salary-calculator/romanian/index.html
 
-# Románia és Magyarország
+# Romániai és magyarországi bérkalkulátor 2026
 
 ## Bérkalkulátor – jogszabályi és számítási dokumentáció
 
