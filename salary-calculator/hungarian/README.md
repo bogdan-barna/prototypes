@@ -4,7 +4,7 @@
 
 ## Indítás
 
-Nyisd meg az `index.html` fájlt egy modern böngészőben.
+Nyisd meg az `index.html` fájlt.
 
 ## Fő funkciók
 
